@@ -5,50 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/html5reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>ABOUT ME | Gloria Kang</title>	
+  <title>CONTACT | Gloria Kang</title>
+  <style>
+    .contact-form {
+      background: #faf4ee;
+      width: 800px;
+      padding: 40px;
+      margin: 20px;
+      box-shadow: -3px 4px 5px rgba(177, 177, 177, 0.5);
+    }
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+    }
+    .contact-form textarea {
+        height: 100px;
+    }
+    .contact-form input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #0050FF;
+      color: white;
+      cursor: pointer;
+      border-radius: 20px 20px 20px 20px;
+    }
+    .contact-form input[type="submit"]:hover {
+      background-color: #4cae4c;
+    }
+  </style>
 </head>	
 <body>
   <div class="skip"><a href="#main">Skip to Main Content</a></div>
   
   <header>
     <nav>
-      
       <div class="logo">
         <div class="blue-square"></div>
         <h1 class="name"><a href = "index.html">Gloria Kang</a></h1>
       </div>
       <ul class="navigation">
-        <li><a href="index.html" class="current">ABOUT ME</a></li>
+        <li><a href="index.html">ABOUT ME</a></li>
         <li><a href="resume.html">RESUME</a></li>
         <li><a href="projects.html">PROJECTS</a></li>
-        <li><a href="contact.html">ABOUT ME</a></li>
+        <li><a href="contact.html" class="current">ABOUT ME</a></li>
     </ul>
     </nav>
   </header>
 
-  <main class="mainpage">
+  <main class="resumepage">
     <!-- <img src="images/profile-card.png" id="profile-card-background"/> -->
-    <div id="profile-card">
-      <img src="images/selfie.jpg" id="selfie"/>
-      <h2>Gloria(Yuxin) <br> Kang</h2>
-      <hr id="horizontal-breaker">
-      <h3>SOFTWARE ENGINEER</h3>
-      <h3>PRODUCT MANAGER</h3>
+    <div id="page-title">
+      <div class="blue-square"></div>
+      <p id="resume-title">Let's talk</p>
     </div>
-    <div id="introduction">
-      <p>My name is Gloria Kang, and graduating from University of Michigan in May 2024. I am majored in Computer Science, minored in User Experience.</p>
-      <a href="resume.html"><button id="resume-button">RESUME</button></a>
-      <a href="projects.html"><button id="project-button">PROJECTS</button></a>
-      <div id="introduction-paragraph">
-        <p>
-          I possesses understanding of backend services, data structures, algorithms, and machine learning infrastructure, as well as solid experience with C++, Python, and Java. 
-          I pick up new technologies quickly and do not hesitate to take on challenges under great pressure. 
-        </p>
 
-        <p>
-          I am also a great team player with efficient communication skills and an innovative mindset. 
-        </p>
-    </div>
+    <div class="contact-form">
+      <form action="/submit_form" method="post">
+        <input type="text" name="name" placeholder="Your Name" required><br>
+        <input type="email" name="email" placeholder="Your Email" required><br>
+        <textarea name="message" placeholder="Your Message" required></textarea><br>
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </main>	
 
