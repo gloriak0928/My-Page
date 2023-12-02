@@ -1,0 +1,380 @@
+/* .blue-square {
+  width: 15px;       
+  height: 15px;       
+  background-color: #0050FF; 
+}
+
+.name {
+  font-size: ;
+  
+  
+} */
+
+/* Resetting margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: 'Arial', sans-serif; */
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Skip link for accessibility */
+.skip {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip a {
+  color: white;
+  text-decoration: none;
+}
+
+.skip a:focus {
+  top: 0;
+}
+
+/* Header and Navigation Styles */
+nav {
+  background: #fcf8f6;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  position:fixed;
+  z-index: 1000;
+  justify-content: space-between;
+  width: 100%;
+  height: 13%;
+  border: 1px solid rgb(205, 205, 205);
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.blue-square {
+  width: 15px;
+  height: 15px;
+  background-color: #0050FF;
+  /* display: inline-block; */
+  margin-right: 10px;
+}
+
+.name, h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.7em;
+  font-weight: bolder;
+}
+
+.name a {
+  text-decoration: none;
+  color: black;
+}
+
+.navigation {
+  list-style-type: none;
+  display: flex;
+}
+
+.navigation li {
+  padding: 0 20px;
+}
+
+.navigation a, h3{
+  text-decoration: none;
+  color: #333;
+  font-weight:200;
+}
+
+
+.navigation a:hover, .current{
+  color: #0050FF;
+}
+
+/* Resume main */
+.resumepage{
+  background-color: #E6DACE;
+  padding-top: 150px;
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-bottom: 75px;
+  display: grid;
+  align-self: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#page-title{
+  padding-left: 300px;
+  margin: 50px;
+  grid-column: 1 / span 3;
+  display: flex;
+  align-items: center;
+}
+
+#page-title p{
+  font-size: 2.5em;
+  font: black;
+  font-weight: bolder;
+}
+
+
+
+#education-title, #skills-title, #experience-title{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: bolder;
+  grid-column: 1 / span 3;
+}
+
+#education-title{
+  grid-column: 1;
+}
+
+.ed-name{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.ed-time{
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.ed-degree{
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.ed-major{
+  grid-column: 2 / span 3;
+  grid-row: 1;
+} 
+
+.ed-GPA{
+  grid-column: 2 / span 3;
+  grid-row: 2;
+}
+
+
+#download-button{
+  grid-column: 3;
+  border: none;
+  background-color: #0050FF;
+  color: white;
+  cursor: pointer;
+  width: 170px;
+  
+  border-radius: 20px 20px 20px 20px;
+}
+
+.job-name{
+  grid-column: 1;
+}
+
+.github-links{
+  grid-column: 1;
+}
+
+.icon {
+  width: 24px; /* Adjust the size as needed */
+  height: 24px;
+}
+
+/* .job-time{
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.job-company{
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.job-location{
+  grid-column: 1;
+  grid-row: 4;
+} */
+
+.job-description{
+  grid-column: 2 / span 2;
+}
+
+.story-card{
+  background-color: #faf4ee;
+  box-shadow: -3px 4px 5px rgba(177, 177, 177, 0.5);
+  text-align:left;
+  padding: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  grid-column: 1 / span 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 100px; */
+  grid-column-gap: 20px;
+}
+
+.story-card:hover{
+  transform: scale(1.05);
+  transition: 0.5s ease;
+}
+
+.story-card .blue-square{
+  width: 10px;
+  height: 10px;
+}
+
+
+/* Main Content Styles */
+.mainpage{
+  background-image: url("../images/background.png");
+  /* background-size: fill; */
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 150px;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 75px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-areas: "profile intro";
+  /* z-index: 10; */
+}
+#profile-card:hover, #selfie:hover, #introduction:hover{
+  transform: scale(1.05);
+  transition: 0.5s ease;
+}
+
+
+#profile-card {
+  padding-top: 70px;
+  padding-bottom: 75px;
+  text-align: center;
+  background-image: url("../images/profile-card.png");
+  padding: 20px;
+  grid-area: "profile";
+  box-shadow: -3px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+#selfie {
+  border-radius: 50%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+#horizontal-breaker {
+  width: 50px;
+  height: 5px;
+  margin: 20px auto;
+  background-color: #0050FF
+}
+
+#introduction {
+  z-index: 10;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  /* padding: 20px; */
+}
+
+#introduction h1 {
+  margin-bottom: 20px;
+}
+
+#introduction p {
+  margin-bottom: 20px;
+}
+
+#resume-button{
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  background-color: #0050FF;
+  color: white;
+  cursor: pointer;
+  width: 150px;
+  border-radius: 20px 20px 20px 20px;
+}
+
+#project-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  width: 148px;
+  border-radius: 20px 20px 20px 20px;
+  border:1px solid #333;
+}
+
+#resume-button:hover,
+#project-button:hover {
+  background-color: #5589f9;
+}
+
+#introduction-paragraph{
+  padding-top: 20px;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #b6b0ab; /* Example background color */
+  color: #333; /* Example text color */
+}
+
+#footer-contact {
+  display: flex;
+  justify-content: space-between; /* Space out flex items */
+}
+
+.social-media-icon-group {
+  display: flex;
+  align-items: center; /* Align social icons and text vertically */
+}
+
+.phone-number{
+  padding-left: 40px;
+}
+.social-media-icon-group{
+  padding-right: 40px;
+}
+
+
+.phone-number, .email {
+  display: flex;
+}
+
+.phone-number p.contact,
+.email p.contact {
+  margin-bottom: 5px; /* Space below 'Contact' text */
+}
+
+.footer-icon {
+  width: 24px; /* Adjust the size as needed */
+  height: 24px;
+  margin-left: 10px;
+}
+
+/* Styles for copyright */
+copyright {
+  margin-top: 20px; /* Space above the copyright text */
+  text-align: center;
+  font-size: 0.5em;
+}
